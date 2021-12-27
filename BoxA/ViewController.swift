@@ -18,9 +18,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var LoginButton: UIButton!
     
+    @IBOutlet weak var EmployeeSignInButton: UIButton!
+    
+
     
     @IBOutlet weak var SignUpButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +61,46 @@ class ViewController: UIViewController {
     
 }
     
-    @IBAction func SignUpTapped(_ sender: Any) {
+    
+
+    
+    
+    
+    
+    @IBAction func DidTapOnEmployeeLogin(_ sender: Any) {
+        
+        let email = EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().signIn(withEmail: email , password: password) { (result, error) in
+            
+            if (error != nil){
+               
+                let ErrorMessage = UIAlertController(title: "Error", message: "Incorrect email/password", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                    print("OK tapped")
+                })
+                ErrorMessage.addAction(ok)
+                
+                self.present(ErrorMessage, animated: true, completion: nil)
+            }
+            else{
+                let EmployeeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.EmployeeVC) as? EmployeeViewController
+                
+                self.view.window?.rootViewController = EmployeeViewController
+                self.view.window?.makeKeyAndVisible()
+            
+            }
+            
+    }
+        
+        
     }
     
+    
+    
+    
+    
+  
 }
 

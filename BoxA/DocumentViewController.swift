@@ -30,6 +30,8 @@ class DocumentViewController: UIViewController {
     
     
     }
+
+    
     
     @IBAction func UploadTapped(_ sender: Any) {
         
@@ -43,15 +45,20 @@ class DocumentViewController: UIViewController {
           }
           print("Authenticated as \(user.name)")
         }
+        
+        
+      
+        let myUrl = "https://account.box.com/login?"
+            if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
 
-
-        
-        
-        
-        
+            // or outside scope use this
+            guard let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty else {
+               return
+            }
+             UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
 
-struct Book: Codable{
-    
-}
+

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,14 +41,14 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhW-Po-yY9">
-                                <rect key="frame" x="102" y="708" width="211" height="42"/>
+                                <rect key="frame" x="99" y="682" width="211" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYT-NW-Ady">
-                                <rect key="frame" x="159" y="758" width="97" height="51"/>
+                                <rect key="frame" x="159" y="732" width="97" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75086906995987435" green="0.96620899439999997" blue="0.7660863379581232" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="linkColor"/>
@@ -56,8 +57,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="SignUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dr5-hH-SBD"/>
-                                    <segue destination="KnD-O7-NPz" kind="presentation" id="vuL-YY-utW"/>
+                                    <segue destination="KnD-O7-NPz" kind="presentation" id="rZ1-Pg-cln"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgh-Cj-3jE">
@@ -74,6 +74,21 @@
                                     <action selector="LoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9A-cc-9cj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFb-A6-fGP">
+                                <rect key="frame" x="76" y="545" width="262" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.2571739415" blue="0.15224365479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="BOFA EMPLOYEE LOGIN" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="DidTapOnEmployeeLogin:" destination="OMA-n7-cbu" eventType="touchUpInside" id="LG3-wk-ssG"/>
+                                    <action selector="DidTapOnEmployeeLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XzX-eZ-lfK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XPj-PR-PCo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,15 +97,58 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="EmailTextField" destination="1Bo-k3-1TX" id="Okp-rq-G3A"/>
+                        <outlet property="EmployeeSignInButton" destination="hFb-A6-fGP" id="Q7f-HX-A0P"/>
                         <outlet property="LoginButton" destination="Sgh-Cj-3jE" id="3ko-ym-bhr"/>
                         <outlet property="PasswordTextField" destination="ODA-10-GTw" id="Hz6-2x-qJW"/>
-                        <outlet property="SignUpButton" destination="qYT-NW-Ady" id="5iI-2c-JRo"/>
+                        <outlet property="SignUpButton" destination="qYT-NW-Ady" id="G7q-Uj-YNw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="OMA-n7-cbu" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="gCb-D4-8dY"/>
             </objects>
-            <point key="canvasLocation" x="2397" y="299"/>
+            <point key="canvasLocation" x="2394.202898550725" y="298.66071428571428"/>
+        </scene>
+        <!--Employee View Controller-->
+        <scene sceneID="L60-BY-FpN">
+            <objects>
+                <viewController storyboardIdentifier="EmployeeVC" id="KfR-y9-QVg" customClass="EmployeeViewController" customModule="BoxA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6lM-MJ-q1B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Bofa Employee Portal!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUe-ht-DcY">
+                                <rect key="frame" x="31" y="143" width="353" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.27529061929999998" blue="0.17082936069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ4-VQ-kjw">
+                                <rect key="frame" x="90" y="454" width="234" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="View customer documents!"/>
+                                <connections>
+                                    <action selector="TappedOnViewDocuments:" destination="KfR-y9-QVg" eventType="touchUpInside" id="Bav-5q-LNA"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saupload_box" translatesAutoresizingMaskIntoConstraints="NO" id="O3z-6b-z7X">
+                                <rect key="frame" x="71" y="294" width="272" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hiB-q7-x5m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="ViewDocumentsButton" destination="cZ4-VQ-kjw" id="hdv-n6-Tpt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1B-ee-glL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734.7826086956522" y="1067.4107142857142"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="xTB-Gu-fx6">
@@ -281,22 +339,51 @@
                                 <color key="textColor" red="0.96620899439999997" green="0.22603241139999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lets upload your documents!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4U-HR-CqN">
-                                <rect key="frame" x="97" y="130" width="221" height="40"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saupload_box" translatesAutoresizingMaskIntoConstraints="NO" id="Uum-0G-Qc6">
+                                <rect key="frame" x="72" y="412" width="272" height="143"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="W2" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vv4-jw-5si">
+                                <rect key="frame" x="179" y="332" width="56" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4971338481" green="0.77398115329999995" blue="0.30316737890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Driver's License" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P3Y-n4-KWC">
+                                <rect key="frame" x="225" y="279" width="134" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4971338481" green="0.77398115329999995" blue="0.30316737890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bank Statement" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cd-NN-IZm">
+                                <rect key="frame" x="49" y="279" width="143" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49713384805689392" green="0.7739811533051546" blue="0.30316737892942608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lets gather your documents!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vY-c0-g6r">
+                                <rect key="frame" x="54" y="149" width="309" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98336823449072164" green="0.0" blue="0.11973753089809389" alpha="0.67073235544217691" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saupload_box" translatesAutoresizingMaskIntoConstraints="NO" id="Uum-0G-Qc6">
-                                <rect key="frame" x="71" y="222" width="272" height="143"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here is a list of documents you will need:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZa-jg-Thf">
+                                <rect key="frame" x="39" y="204" width="338" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tay-lo-0uT">
-                                <rect key="frame" x="128" y="387" width="158" height="31"/>
+                                <rect key="frame" x="110" y="572" width="195" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Upload here!"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Share your Documents!"/>
                                 <connections>
                                     <action selector="UploadTapped:" destination="z1i-5h-k78" eventType="touchUpInside" id="vdo-kF-pM8"/>
                                     <segue destination="2g1-tp-uQj" kind="presentation" id="6gI-2r-NBh"/>
@@ -322,13 +409,33 @@
                     <view key="view" contentMode="scaleToFill" id="wi6-zH-x4s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HANG TIGHT!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-X5-Cho">
+                                <rect key="frame" x="150" y="112" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2021-12-24 at 5.20.29 PM" highlightedImage="Screen Shot 2021-12-24 at 5.20.29 PM" translatesAutoresizingMaskIntoConstraints="NO" id="bes-bU-Ikg">
+                                <rect key="frame" x="63" y="160" width="301" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One of our world class employees will reach out to you soon!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-v0-fhV">
+                                <rect key="frame" x="63" y="310" width="289" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EaK-nr-0a0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.20030154303719572" blue="0.16336903445035034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dW-Oh-lBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6513" y="-281"/>
+            <point key="canvasLocation" x="6511.594202898551" y="-281.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zOr-J6-hEi">
@@ -355,6 +462,7 @@
     <resources>
         <image name="BL" width="350" height="350"/>
         <image name="PL" width="200" height="200"/>
+        <image name="Screen Shot 2021-12-24 at 5.20.29 PM" width="430" height="238"/>
         <image name="auto-loan" width="388" height="324"/>
         <image name="housing-loan" width="500" height="500"/>
         <image name="saupload_box" width="800" height="445"/>

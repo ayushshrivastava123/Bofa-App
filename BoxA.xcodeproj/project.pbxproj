@@ -21,6 +21,7 @@
 		906597002766D3FD0070E45A /* BoxATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906596FF2766D3FD0070E45A /* BoxATests.swift */; };
 		9065970A2766D3FD0070E45A /* BoxAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906597092766D3FD0070E45A /* BoxAUITests.swift */; };
 		9065970C2766D3FD0070E45A /* BoxAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065970B2766D3FD0070E45A /* BoxAUITestsLaunchTests.swift */; };
+		90B34F982776B38A00572EE3 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B34F972776B38A00572EE3 /* EmployeeViewController.swift */; };
 		90C4C501276EE4BB005DC297 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90C4C500276EE4BB005DC297 /* GoogleService-Info.plist */; };
 		90D71AC1276FD108004F7063 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D71AC0276FD108004F7063 /* AppDelegate.m */; };
 		90F7B6362766FDE500606104 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F7B6352766FDE500606104 /* SignUpViewController.swift */; };
@@ -72,6 +73,7 @@
 		906597052766D3FD0070E45A /* BoxAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoxAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		906597092766D3FD0070E45A /* BoxAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxAUITests.swift; sourceTree = "<group>"; };
 		9065970B2766D3FD0070E45A /* BoxAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		90B34F972776B38A00572EE3 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		90C4C500276EE4BB005DC297 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90D71ABF276FD108004F7063 /* BoxA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoxA-Bridging-Header.h"; sourceTree = "<group>"; };
 		90D71AC0276FD108004F7063 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				906596EA2766D3FB0070E45A /* SceneDelegate.swift */,
 				906596EC2766D3FB0070E45A /* ViewController.swift */,
 				906596EE2766D3FB0070E45A /* Main.storyboard */,
+				90B34F972776B38A00572EE3 /* EmployeeViewController.swift */,
 				90F9520B276F2FBF008B5905 /* Constants.swift */,
 				906596F12766D3FD0070E45A /* Assets.xcassets */,
 				906596F32766D3FD0070E45A /* LaunchScreen.storyboard */,
@@ -439,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B34F982776B38A00572EE3 /* EmployeeViewController.swift in Sources */,
 				906596ED2766D3FB0070E45A /* ViewController.swift in Sources */,
 				906596E92766D3FB0070E45A /* AppDelegate.swift in Sources */,
 				906596EB2766D3FB0070E45A /* SceneDelegate.swift in Sources */,
@@ -554,7 +558,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -609,7 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -628,9 +632,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2A2F7FYMQF;
+				DEVELOPMENT_TEAM = A7ZZXXM7PB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BoxA/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BoxA;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -664,9 +669,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2A2F7FYMQF;
+				DEVELOPMENT_TEAM = A7ZZXXM7PB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BoxA/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BoxA;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
